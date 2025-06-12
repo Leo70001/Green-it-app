@@ -1,11 +1,12 @@
+import { BottomTabParamList } from '@/interfaces/types';
 import { Ionicons } from '@expo/vector-icons'; // or use any icon library
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { StyleSheet } from 'react-native';
 import index from './index'; // replace with actual screen
 import profile from './profile'; // replace with actual screen
-import search from './search';
+import QuizScreen from './QuizScreen';
 
-const Tabs = createBottomTabNavigator();
+const Tabs = createBottomTabNavigator<BottomTabParamList>();
 
 export default function _layout() {
     return (
@@ -19,8 +20,8 @@ export default function _layout() {
                         iconName = focused ? 'home' : 'home-outline';
                     } else if (route.name === 'profile') {
                         iconName = focused ? 'person' : 'person-outline';
-                    } else if (route.name === 'search') {
-                        iconName = focused ? 'search' : 'search-outline'
+                    } else if (route.name === 'Quiz') {
+                        iconName = focused ? 'help-circle' : 'help-circle-outline';
                     }
 
                     return <Ionicons name={iconName as keyof typeof Ionicons.glyphMap} size={size} color={color} />;
@@ -41,10 +42,10 @@ export default function _layout() {
             />
 
             <Tabs.Screen
-                name="search"
-                component={search}
+                name="Quiz"
+                component={QuizScreen}
                 options={{
-                    title: 'Search',
+                    title: 'Quiz',
                     headerShown: false,
                 }}
             />
