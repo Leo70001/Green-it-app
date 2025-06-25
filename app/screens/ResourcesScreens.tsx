@@ -134,10 +134,10 @@ const styles = StyleSheet.create({
     categoryTitle: {
         fontSize: 20,
         fontWeight: 'bold',
-        color: 'gold',
+        color: 'green',
         marginBottom: 16,
         borderBottomWidth: 1,
-        borderBottomColor: 'gold',
+        borderBottomColor: 'green',
         paddingBottom: 8,
     },
     linkContainer: {
@@ -159,7 +159,7 @@ const styles = StyleSheet.create({
     },
     linkUrl: {
         fontSize: 14,
-        color: 'gold',
+        color: 'green',
         marginTop: 12,
         fontWeight: 'bold',
         textAlign: 'right',

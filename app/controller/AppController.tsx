@@ -10,8 +10,8 @@ import Animated, {
 } from 'react-native-reanimated';
 
 // Import your two screens
-import LoadingScreen from './(tabs)/LoadingScreen';
-import IndexScreen from './(tabs)/index'; // Make sure this is the correct path to your main screen component
+import IndexScreen from '../screens/HomeScreen';
+import LoadingScreen from '../screens/LoadingScreen';
 
 /**
  * This component orchestrates the transition from the loading screen

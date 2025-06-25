@@ -1,4 +1,4 @@
-import WorldMap from "@/assets/svgs/world_map";
+import WorldMap from "@/app/components/world_map";
 import React, { useCallback, useEffect, useState } from "react";
 import { RefreshControl, SafeAreaView, ScrollView, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import Animated, {
@@ -16,7 +16,7 @@ import {
   Selection,
   continentDisplayNames,
   continentTimelines
-} from "@/interfaces/continentData";
+} from "@/app/data/continentData";
 
 export default function Index() {
   // State is renamed to `activeSelection` to reflect it can be a continent or "world"
@@ -61,7 +61,7 @@ export default function Index() {
 
   const createFillProps = (sharedValue: Animated.SharedValue<number>) =>
     useAnimatedProps(() => ({
-      fill: interpolateColor(sharedValue.value, [0, 1], ["#ccc9be", "gold"]),
+      fill: interpolateColor(sharedValue.value, [0, 1], ["#ccc9be", "green"]),
     }));
 
   const continentFills = {
@@ -249,7 +249,7 @@ const styles = StyleSheet.create({
     position: "relative",
   },
   timelineDate: {
-    color: "gold",
+    color: "green",
     fontWeight: "bold",
     marginBottom: 4,
     fontSize: 16,
@@ -262,7 +262,7 @@ const styles = StyleSheet.create({
   timelineDot: {
     width: 10,
     height: 10,
-    backgroundColor: "gold",
+    backgroundColor: "green",
     borderRadius: 5,
     position: "absolute",
     left: -6, // Adjusted for new border width

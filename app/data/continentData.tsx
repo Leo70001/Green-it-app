@@ -11,12 +11,12 @@ export type TimelineEntry = { date: string; description: string };
 
 // Update the record key to be the new `Selection` type
 export const continentDisplayNames: Record<Selection, string> = {
-  africa: "Africa",
+  africa: "Afrique",
   europe: "Europe",
-  asia: "Asia",
-  namerica: "North America",
-  samerica: "South America",
-  australia: "Australia",
+  asia: "Asie",
+  namerica: "Amérique du Nord",
+  samerica: "Amérique du Sud",
+  australia: "Australie",
   world: "Organisations Mondiales",
 };
 

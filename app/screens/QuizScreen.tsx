@@ -1,4 +1,4 @@
-import { quizQuestionsBank } from "@/interfaces/quizData";
+import { quizQuestionsBank } from "@/app/data/quizData";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import React, { useCallback, useEffect, useState } from "react";
 import {
@@ -368,10 +368,10 @@ const styles = StyleSheet.create({
     question: { color: "white", fontSize: 18, marginBottom: 12, fontWeight: '600' },
     option: { backgroundColor: "#4C4D4D", padding: 12, borderRadius: 8, marginBottom: 8 },
     optionText: { color: "white", fontSize: 16 },
-    selectedOption: { borderWidth: 2, borderColor: "gold" },
+    selectedOption: { borderWidth: 2, borderColor: "green" },
     correctOption: { backgroundColor: "#2E7D32" }, 
     wrongOption: { backgroundColor: "#C62828" }, 
-    submitButton: { marginTop: 20, backgroundColor: "gold", padding: 14, borderRadius: 10, alignItems: "center" },
+    submitButton: { marginTop: 20, backgroundColor: "green", padding: 14, borderRadius: 10, alignItems: "center" },
     submitText: { fontWeight: "bold", fontSize: 16, color: "#2A3836" },
     resultText: { color: "white", fontSize: 18, textAlign: "center", marginTop: 12, lineHeight: 28 },
     backButton: { alignSelf: 'flex-start', paddingHorizontal: 10, paddingVertical: 5, marginBottom: 15 },
